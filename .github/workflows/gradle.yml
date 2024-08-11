@@ -36,6 +36,9 @@ jobs:
         browsers: chrome
         last-versions: 1
 
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+
     - name: Build with gradle
       run: ./gradlew clean build
 
