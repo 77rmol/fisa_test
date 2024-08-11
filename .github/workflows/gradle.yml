@@ -22,14 +22,14 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
+    - name: Print Google Chrome version
+      run: google-chrome --version
+
     - name: Make gradlew executable
       run: chmod +x ./gradlew
 
-    - name: Build with Maven
+    - name: Build with gradle
       run: ./gradlew clean build
-
-    - name: Run tests
-      run: ./gradlew test
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
