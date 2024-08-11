@@ -22,6 +22,10 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
+    - uses: browser-actions/setup-chrome@v1
+      with:
+          chrome-version: 120
+
     - name: Print Google Chrome version
       run: google-chrome --version
 
