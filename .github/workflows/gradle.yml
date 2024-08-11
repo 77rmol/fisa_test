@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up JDK
       uses: actions/setup-java@v4
@@ -22,15 +22,19 @@ jobs:
         distribution: 'zulu'
         java-version: '17'
 
-    - uses: browser-actions/setup-chrome@v1
+    - name: store docker image cache
+      uses: satackey/action-docker-layer-caching@v0.0.11
+      continue-on-error: true
+
+    - name: Start Selenoid server
+      uses: n-ton4/selenoid-github-action@master
+      id: start-selenoid
+      continue-on-error: false
       with:
-          chrome-version: 120
-
-    - name: Print Google Chrome version
-      run: google-chrome --version
-
-    - name: Make gradlew executable
-      run: chmod +x ./gradlew
+        version: 1.10.1
+        args: -limit 10
+        browsers: chrome
+        last-versions: 1
 
     - name: Build with gradle
       run: ./gradlew clean build
