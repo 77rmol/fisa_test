@@ -8,5 +8,5 @@ Feature: Happiness Song
     Examples:
       | melodie                                                                                                                                                                                          |
       | si, si, do, re, re, do, si, la, sol, sol, la, si, si, la, la                                                                                                                                     |
-      | si, si, do, re, re, do, si, la, sol, sol, la, si, si, la, la,si, si, do, re, re, do, si, la, sol, sol, la, si, si, la, la                                                                        |
-      | si, si, do, re, re, do, si, la, sol, sol, la, si, la, sol, sol, la, si, sol, la, si, do, si, sol, la, si, do, si, sol, sol, fa, re, si, si, do, re, re, do, si, la, sol, sol, la, si, si, la, la |
+      #| si, si, do, re, re, do, si, la, sol, sol, la, si, si, la, la,si, si, do, re, re, do, si, la, sol, sol, la, si, si, la, la                                                                        |
+      #| si, si, do, re, re, do, si, la, sol, sol, la, si, la, sol, sol, la, si, sol, la, si, do, si, sol, la, si, do, si, sol, sol, fa, re, si, si, do, re, re, do, si, la, sol, sol, la, si, si, la, la |

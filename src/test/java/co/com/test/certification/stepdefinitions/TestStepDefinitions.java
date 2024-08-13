@@ -29,6 +29,7 @@ public class TestStepDefinitions {
 
     @Managed
     private WebDriver hisBrowser;
+
     private static final Logger LOGGER = LogManager.getLogger(TestStepDefinitions.class);
     public static EnvironmentVariables environmentVariables;
     static String url;

@@ -22,6 +22,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 120
+          install-chromedriver: true
+
       - uses: browser-actions/setup-chrome@latest
       - run: chrome --version
 
@@ -32,5 +37,5 @@ jobs:
         uses: actions/upload-artifact@v4
         if: success() || failure()
         with:
-          name: Serenity Report                 # Name of the folder
+          name: Serenity Report
           path: target/site/serenity/
